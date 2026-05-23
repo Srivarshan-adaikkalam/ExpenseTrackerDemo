@@ -16,7 +16,7 @@ st.set_page_config(
 
 SCOPES     = ["https://www.googleapis.com/auth/spreadsheets",
               "https://www.googleapis.com/auth/drive"]
-SHEET_NAME = "ExpenseTrackerDB"
+SHEET_NAME = "Expense_TrackerDB"
 cur        = "₹"
 
 # ─────────────────────────────────────────
@@ -462,7 +462,7 @@ if not st.session_state.logged_in:
     if not usernames:
         st.warning("No users found in sheet."); st.stop()
     sel = st.selectbox("👤 Select User", usernames)
-    pwd = st.text_input("🔑 Password", type="password", placeholder="Enter your password")
+    pwd = st.text_input("🔑 Password:sudo123", type="password", placeholder="Enter your password")
     if st.button("Sign In →", use_container_width=True, type="primary"):
         row = _u[_u["UserName"] == sel]
         if not row.empty:
